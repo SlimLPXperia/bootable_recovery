@@ -98,6 +98,11 @@ int main(int argc, char **argv) {
 	time_t StartupTime = time(NULL);
 	printf("Starting TWRP %s on %s (pid %d)\n", TW_VERSION_STR, ctime(&StartupTime), getpid());
 
+	gui_print_color("highlight", "\n==================================\n");
+	gui_print_color("highlight", "Team Win Recovery Project v%s\n", TW_VERSION_STR);
+	gui_print_color("highlight", "Modified & Ported by Agontuk\n");
+	gui_print_color("highlight", "==================================\n\n");
+
 	// Load default values to set DataManager constants and handle ifdefs
 	DataManager::SetDefaultValues();
 	printf("Starting the UI...");
